@@ -1,0 +1,101 @@
+{
+  "entities": {
+    "Note": {
+      "title": "Note",
+      "description": "Study note published for a class",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "class": { "type": "string" },
+        "subject": { "type": "string" },
+        "title": { "type": "string" },
+        "content": { "type": "string" },
+        "date": { "type": "string" },
+        "fileUrl": { "type": "string" },
+        "fileName": { "type": "string" },
+        "fileSize": { "type": "string" },
+        "fileType": { "type": "string" }
+      },
+      "required": ["id", "class", "subject", "title", "content", "date"]
+    },
+    "Homework": {
+      "title": "Homework",
+      "description": "Daily homework and task assignments",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "class": { "type": "string" },
+        "subject": { "type": "string" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "instructions": { "type": "string" },
+        "assignedDate": { "type": "string" },
+        "dueDate": { "type": "string" },
+        "priority": { "type": "string" },
+        "completed": { "type": "boolean" },
+        "attachment": { "type": "string" }
+      },
+      "required": ["id", "class", "subject", "title", "dueDate", "priority"]
+    },
+    "SchoolNotice": {
+      "title": "SchoolNotice",
+      "description": "Official circular or announcement from school",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "content": { "type": "string" },
+        "date": { "type": "string" },
+        "targetClass": { "type": "string" }
+      },
+      "required": ["id", "title", "content", "date", "targetClass"]
+    },
+    "NotificationItem": {
+      "title": "NotificationItem",
+      "description": "System event notification for students and teachers",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "message": { "type": "string" },
+        "date": { "type": "string" },
+        "type": { "type": "string" },
+        "targetClass": { "type": "string" },
+        "isRead": { "type": "boolean" }
+      },
+      "required": ["id", "title", "message", "date", "type", "targetClass"]
+    },
+    "SubjectsMapDoc": {
+      "title": "SubjectsMapDoc",
+      "description": "Configuration mapping classes to their 10 assigned subjects",
+      "type": "object",
+      "properties": {
+        "subjects": { "type": "object" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["subjects"]
+    }
+  },
+  "firestore": {
+    "/notes/{noteId}": {
+      "schema": "Note",
+      "description": "Collection of study notes"
+    },
+    "/homework/{homeworkId}": {
+      "schema": "Homework",
+      "description": "Collection of homework assignments"
+    },
+    "/notices/{noticeId}": {
+      "schema": "SchoolNotice",
+      "description": "Collection of school notices and announcements"
+    },
+    "/notifications/{notificationId}": {
+      "schema": "NotificationItem",
+      "description": "Collection of notifications"
+    },
+    "/settings/subjects": {
+      "schema": "SubjectsMapDoc",
+      "description": "Global school subject configurations"
+    }
+  }
+}

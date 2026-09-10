@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="hubGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="50%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0f172a" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <!-- Background rounded squircle -->
+  <rect width="512" height="512" rx="112" fill="url(#hubGrad)" />
+
+  <!-- Inner decorative glow -->
+  <circle cx="256" cy="140" r="160" fill="#ffffff" opacity="0.08" />
+
+  <!-- Book / Knowledge Icon -->
+  <g filter="url(#shadow)" transform="translate(106, 120)">
+    <!-- Open Book Left Page -->
+    <path d="M150 250 C100 240 40 244 10 260 L10 70 C40 54 100 50 150 62 Z" fill="#ffffff" />
+    <!-- Open Book Right Page -->
+    <path d="M150 250 C200 240 260 244 290 260 L290 70 C260 54 200 50 150 62 Z" fill="#f1f5f9" />
+    <!-- Spine binding -->
+    <path d="M142 60 C146 58 154 58 158 60 L158 252 C154 250 146 250 142 252 Z" fill="#cbd5e1" />
+    <!-- Page lines left -->
+    <line x1="45" y1="100" x2="125" y2="92" stroke="#94a3b8" stroke-width="6" stroke-linecap="round" />
+    <line x1="45" y1="135" x2="125" y2="127" stroke="#94a3b8" stroke-width="6" stroke-linecap="round" />
+    <line x1="45" y1="170" x2="105" y2="162" stroke="#94a3b8" stroke-width="6" stroke-linecap="round" />
+    <!-- Page lines right -->
+    <line x1="175" y1="92" x2="255" y2="100" stroke="#94a3b8" stroke-width="6" stroke-linecap="round" />
+    <line x1="175" y1="127" x2="255" y2="135" stroke="#94a3b8" stroke-width="6" stroke-linecap="round" />
+    <line x1="175" y1="162" x2="235" y2="170" stroke="#94a3b8" stroke-width="6" stroke-linecap="round" />
+    <!-- Golden bookmark ribbon -->
+    <path d="M138 52 L162 52 L162 160 L150 145 L138 160 Z" fill="url(#accentGrad)" />
+    <!-- Star on top right -->
+    <path d="M220 20 L225 35 L240 37 L228 48 L232 62 L220 54 L208 62 L212 48 L200 37 L215 35 Z" fill="#fef08a" />
+  </g>
+</svg>

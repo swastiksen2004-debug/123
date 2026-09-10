@@ -1,0 +1,6 @@
+{
+  "name": "KBSSN",
+  "description": "KARTIK BIDYANTA SMRITI SISHU NIKETAN - Mobile-first school notes, homework, and notices Progressive Web App.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
